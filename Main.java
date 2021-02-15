@@ -30,9 +30,10 @@ class Main {
 
     System.out.println("Please guess a number between 0 and " + theUserNum); userGuess = s2.nextInt();
 
-    int numTries;
+    int numTries = 1;
 
     while (userGuess != theRandomNum) {
+      numTries++;
       
       if (userGuess > theRandomNum) {System.out.println("Guess lower!");}
 
@@ -40,9 +41,6 @@ class Main {
       
       System.out.println("Enter your new guess: "); userGuess = s2.nextInt();}
 
-    
-      
-
-
+      System.out.println("Great, you win! It took you " + numTries + " tries."); /*is it fine if it only took them 1 try but it still says tries plural */
   }
 }
